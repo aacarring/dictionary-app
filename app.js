@@ -1,6 +1,6 @@
 const inputBar = document.querySelector('.search input');
 const searchButton = document.querySelector('.search button');
-const wordInfo = document.querySelector('.word-info');
+const wordInfo = document.querySelector('.word-info-container');
 
 function searchForWord() {
     //reset from one word to the next
@@ -32,20 +32,42 @@ function searchForWord() {
                 if (emoji === "null") return;
 
                 let myWord = document.createElement('div');
-                if (pronunciation !== null && emoji !== null) {
+                myWord.classList.add('word-info-div');
+                if (pronunciation !== null && emoji !== null && example !== "") {
                     myWord.innerHTML = `
-                    <span>${word}</span>
-                    <span>${pronunciation}</span>
-                    <span>${type}</span>
-                    <span>${definition} ${emoji}</span>
-                    <span>"${example}"</span>
+                    <span class="word">${word}</span>
+                    <span class="pronunciation">${pronunciation}</span>
+                    <span class="type">${type}</span>
+                    <span class="definition">${definition} ${emoji}</span>
+                    <span class="example">"${example}"</span>
+                `
+                } else if (emoji !== null && example !== "") {
+                    myWord.innerHTML = `
+                    <span class="word">${word}</span>
+                    <span class="type">${type}</span>
+                    <span class="definition">${definition} ${emoji}</span>
+                    <span class="example">"${example}"</span>
+                `
+                } else if (example !== "" && pronunciation !== null){
+                    myWord.innerHTML = `
+                    <span class="word">${word}</span>
+                    <span class="pronunciation">${pronunciation}</span>
+                    <span class="type">${type}</span>
+                    <span class="definition">${definition}</span>
+                    <span class="example">"${example}"</span>
+                `
+                } else if (emoji !== null && pronunciation !== null){
+                    myWord.innerHTML = `
+                    <span class="word">${word}</span>
+                    <span class="pronunciation">${pronunciation}</span>
+                    <span class="type">${type}</span>
+                    <span class="definition">${definition} ${emoji}</span>
                 `
                 } else {
                     myWord.innerHTML = `
-                    <span>${word}</span>
-                    <span>${type}</span>
-                    <span>${definition}</span>
-                    <span>"${example}"</span>
+                    <span class="word">${word}</span>
+                    <span class="type">${type}</span>
+                    <span class="definition">${definition}</span>
                 `
                 }
                 wordInfo.appendChild(myWord);

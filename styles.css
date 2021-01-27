@@ -5,9 +5,8 @@
 }
 
 body {
-  overflow: scroll;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +16,7 @@ body header {
   text-align: center;
   height: 10vh;
   width: 75vw;
-  border: 5px solid rebeccapurple;
+  margin-top: 5vh;
 }
 body .search {
   display: flex;
@@ -26,7 +25,6 @@ body .search {
   align-items: center;
   flex-direction: row;
   width: 75vw;
-  border: 5px solid lightcoral;
   margin: 2.5vh 5vw;
 }
 body .search input {
@@ -39,15 +37,53 @@ body .search button {
   border-radius: 10px;
   outline: none;
   margin: 2.5vh 10px;
-  border: 2px solid black;
 }
 body .search button:hover {
   cursor: pointer;
 }
-body .word-info {
+body .word-info-container {
   width: 75vw;
-  height: 75vh;
-  border: 5px solid forestgreen;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .word-info-container .word-info-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  border: 2px solid #f8f4f4;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #f8f4f4;
+  width: 50vw;
+  min-width: 300px;
+  margin: 1vh 1vw;
+}
+body .word-info-container .word-info-div .word {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1vh 1vw;
+}
+body .word-info-container .word-info-div .pronunciation {
+  color: grey;
+  font-style: italic;
+  font-size: 1.5em;
+  margin: 1vh 1vw;
+}
+body .word-info-container .word-info-div .type {
+  font-size: 1.5em;
+  margin: 1vh 1vw;
+}
+body .word-info-container .word-info-div .definition {
+  font-size: 1.25em;
+  margin: 1vh 1vw;
+}
+body .word-info-container .word-info-div .example {
+  font-style: italic;
+  margin: 1vh 1vw;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,21 +6,24 @@
     box-sizing: border-box;
 }
 body {
-    overflow: scroll;
+    
     width: 100vw;
     height: 100vh;
     @include flexDisplay();
     header {
         text-align: center;
-        height: 10vh;
+        height: 5vh;
         width: 75vw;
-        border: 5px solid rebeccapurple;
+        margin-top: 5vh;
+        h1,
+        span {
+            margin: 2.5vh auto;
+        }
     }
     .search {
         @include flexDisplay();
         flex-direction: row;
         width: 75vw;
-        border: 5px solid lightcoral;
         margin: 2.5vh 5vw;
         input {
             max-width: 30vw;
@@ -32,15 +35,50 @@ body {
             border-radius: 10px;
             outline: none;
             margin: 2.5vh 10px;
-            border: 2px solid black;
+            border: 5px solid black;
             &:hover {
                 cursor: pointer;
             }
         }
     }
-    .word-info {
+    .word-info-container {
         width: 75vw;
-        height: 75vh;
-        border: 5px solid forestgreen;
+        height: 50vh;
+        margin: 5vh auto;
+        @include flexDisplay();
+        .word-info-div {
+            @include flexDisplay();
+            align-items: flex-start;
+            border: 2px solid lightcyan;
+            border-radius: 15px;
+            box-shadow: 1px 1px 10px lightcyan;
+            width: 50vw;
+            min-width: 300px;
+            margin: 1vh 1vw;
+            .word{
+                font-size: 2em;
+                font-weight: bold;
+                margin: 1vh 1vw;
+            }
+            .pronunciation {
+                color: grey;
+                font-style: italic;
+                font-size: 1.5em;
+                margin: 1vh 1vw;
+            }
+            .type {
+                font-size: 1.5em;
+                margin: 1vh 1vw;
+            }
+            .definition {
+                font-size: 1.25em;
+                margin: 1vh 1vw;
+            }
+            .example {
+                font-size: 1.25em;
+                font-style: italic;
+                margin: 1vh 1vw;
+            }
+        }
     }
 }
