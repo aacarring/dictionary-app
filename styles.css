@@ -6,19 +6,27 @@
 
 body {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 body header {
+  position: absolute;
+  top: 5vh;
   text-align: center;
-  height: 10vh;
+  height: 5vh;
   width: 75vw;
   margin-top: 5vh;
 }
+body header h1,
+body header span {
+  margin: 1vh auto;
+}
 body .search {
+  position: absolute;
+  top: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,12 +45,16 @@ body .search button {
   border-radius: 10px;
   outline: none;
   margin: 2.5vh 10px;
+  border: 2px solid black;
 }
 body .search button:hover {
   cursor: pointer;
 }
 body .word-info-container {
+  position: absolute;
+  top: 30vh;
   width: 75vw;
+  min-height: 50vh;
   margin: 5vh auto;
   display: flex;
   flex-direction: column;
@@ -55,12 +67,12 @@ body .word-info-container .word-info-div {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  border: 2px solid #f8f4f4;
+  border: 2px solid saddlebrown;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px #f8f4f4;
+  box-shadow: 1px 1px 10px saddlebrown;
   width: 50vw;
   min-width: 300px;
-  margin: 1vh 1vw;
+  margin: 1.5vh 1.5vw;
 }
 body .word-info-container .word-info-div .word {
   font-size: 2em;
@@ -82,6 +94,7 @@ body .word-info-container .word-info-div .definition {
   margin: 1vh 1vw;
 }
 body .word-info-container .word-info-div .example {
+  font-size: 1.25em;
   font-style: italic;
   margin: 1vh 1vw;
 }

@@ -11,16 +11,20 @@ body {
     height: 100vh;
     @include flexDisplay();
     header {
+        position: absolute;
+        top: 5vh;
         text-align: center;
         height: 5vh;
         width: 75vw;
         margin-top: 5vh;
         h1,
         span {
-            margin: 2.5vh auto;
+            margin: 1vh auto;
         }
     }
     .search {
+        position: absolute;
+        top: 20vh;
         @include flexDisplay();
         flex-direction: row;
         width: 75vw;
@@ -35,26 +39,28 @@ body {
             border-radius: 10px;
             outline: none;
             margin: 2.5vh 10px;
-            border: 5px solid black;
+            border: 2px solid black;
             &:hover {
                 cursor: pointer;
             }
         }
     }
     .word-info-container {
+        position: absolute;
+        top: 30vh;
         width: 75vw;
-        height: 50vh;
+        min-height: 50vh;
         margin: 5vh auto;
         @include flexDisplay();
         .word-info-div {
             @include flexDisplay();
             align-items: flex-start;
-            border: 2px solid lightcyan;
+            border: 2px solid saddlebrown;
             border-radius: 15px;
-            box-shadow: 1px 1px 10px lightcyan;
+            box-shadow: 1px 1px 10px saddlebrown;
             width: 50vw;
             min-width: 300px;
-            margin: 1vh 1vw;
+            margin: 1.5vh 1.5vw;
             .word{
                 font-size: 2em;
                 font-weight: bold;
