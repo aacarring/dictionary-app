@@ -1,0 +1,46 @@
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: scroll;
+    width: 100vw;
+    height: 100vh;
+    @include flexDisplay();
+    header {
+        text-align: center;
+        height: 10vh;
+        width: 75vw;
+        border: 5px solid rebeccapurple;
+    }
+    .search {
+        @include flexDisplay();
+        flex-direction: row;
+        width: 75vw;
+        border: 5px solid lightcoral;
+        margin: 2.5vh 5vw;
+        input {
+            max-width: 30vw;
+            min-width: 200px;
+            margin: 2.5vh 10px;
+        }
+        button {
+            min-width: 75px;
+            border-radius: 10px;
+            outline: none;
+            margin: 2.5vh 10px;
+            border: 2px solid black;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .word-info {
+        width: 75vw;
+        height: 75vh;
+        border: 5px solid forestgreen;
+    }
+}
