@@ -17,7 +17,13 @@ function searchForWord() {
     }
 
     fetch(url, params)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                alert("No results found for given input, try again.");
+            } else {
+                return response.json()
+            }
+        })
         .then(data => {
             let word = data.word;
             let pronunciation = data.pronunciation;
