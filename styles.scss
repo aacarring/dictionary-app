@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 body {
-    
+    background: $main-beige;
+    color: $main-brown;
     width: 100vw;
     height: 100vh;
     @include flexDisplay();
@@ -36,13 +37,20 @@ body {
             margin: 2.5vh 5px;
         }
         button {
-            min-width: 75px;
+            min-width: 65px;
+            padding: 2.5px;
             border-radius: 10px;
             outline: none;
             margin: 2.5vh 5px;
-            border: 2px solid black;
+            color: $main-beige;
+            background: $main-brown;
+            border: none;
             &:hover {
                 cursor: pointer;
+                padding: .5px;
+                border: 2px solid $accent;
+                background: $main-beige;
+                color: $main-brown;
             }
         }
     }
@@ -60,12 +68,12 @@ body {
         .word-info-div {
             @include flexDisplay();
             align-items: flex-start;
-            border: 2px solid saddlebrown;
             border-radius: 15px;
-            box-shadow: 1px 1px 10px saddlebrown;
+            box-shadow: 1px 1px 10px $accent;
             width: 50vw;
-            min-width: 300px;
+            min-width: 290px;
             margin: 1.5vh 1.5vw;
+            padding: 10px;
             .word{
                 font-size: 2em;
                 font-weight: bold;

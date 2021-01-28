@@ -5,6 +5,8 @@
 }
 
 body {
+  background: #F9EBDE;
+  color: #815854;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -42,14 +44,21 @@ body .search input {
   margin: 2.5vh 5px;
 }
 body .search button {
-  min-width: 75px;
+  min-width: 65px;
+  padding: 2.5px;
   border-radius: 10px;
   outline: none;
   margin: 2.5vh 5px;
-  border: 2px solid black;
+  color: #F9EBDE;
+  background: #815854;
+  border: none;
 }
 body .search button:hover {
   cursor: pointer;
+  padding: 0.5px;
+  border: 2px solid peru;
+  background: #F9EBDE;
+  color: #815854;
 }
 body .word-info-container {
   position: absolute;
@@ -72,12 +81,12 @@ body .word-info-container .word-info-div {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  border: 2px solid saddlebrown;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px saddlebrown;
+  box-shadow: 1px 1px 10px peru;
   width: 50vw;
-  min-width: 300px;
+  min-width: 290px;
   margin: 1.5vh 1.5vw;
+  padding: 10px;
 }
 body .word-info-container .word-info-div .word {
   font-size: 2em;

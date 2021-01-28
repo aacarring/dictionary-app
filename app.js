@@ -42,7 +42,7 @@ function searchForWord() {
 
                 let myWord = document.createElement('div');
                 myWord.classList.add('word-info-div');
-                if (pronunciation !== null && emoji !== null && example !== "") {
+                if (pronunciation !== null && emoji !== null && example !== "" && example !== null) {
                     myWord.innerHTML = `
                     <span class="word">${word}</span>
                     <span class="pronunciation">${pronunciation}</span>
@@ -50,14 +50,14 @@ function searchForWord() {
                     <span class="definition">${definition} ${emoji}</span>
                     <span class="example">"${example}"</span>
                 `
-                } else if (emoji !== null && example !== "") {
+                } else if (emoji !== null && example !== "" && example !== null) {
                     myWord.innerHTML = `
                     <span class="word">${word}</span>
                     <span class="type">${type}</span>
                     <span class="definition">${definition} ${emoji}</span>
                     <span class="example">"${example}"</span>
                 `
-                } else if (example !== "" && pronunciation !== null){
+                } else if (example !== "" && example !== null && pronunciation !== null){
                     myWord.innerHTML = `
                     <span class="word">${word}</span>
                     <span class="pronunciation">${pronunciation}</span>
