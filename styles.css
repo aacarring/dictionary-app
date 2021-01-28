@@ -23,9 +23,9 @@ body header {
   min-width: 175px;
   margin-top: 2.5vh;
 }
-body header h1,
-body header span {
-  margin: 1vh auto;
+body header h1 {
+  font-family: "Codystar", cursive;
+  margin-bottom: 2.5vh;
 }
 body .search {
   position: absolute;
