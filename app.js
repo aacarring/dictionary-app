@@ -1,8 +1,11 @@
 const inputBar = document.querySelector('.search input');
 const searchButton = document.querySelector('.search button');
 const wordInfo = document.querySelector('.word-info-container');
+const dictionaryImg = document.querySelector('.word-info-container img');
 
 function searchForWord() {
+    //remove dictionaryImg to make space for word info results
+    dictionaryImg.remove();
     //reset from one word to the next
     wordInfo.innerHTML = "";
 
