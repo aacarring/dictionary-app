@@ -9,7 +9,7 @@ body {
     background: $main-beige;
     color: $main-brown;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     @include flexDisplay();
     header {
         position: absolute;
@@ -72,31 +72,31 @@ body {
             box-shadow: 1px 1px 10px $accent;
             width: 50vw;
             min-width: 290px;
-            margin: 1.5vh 1.5vw;
+            margin: 2vh 2vw;
             padding: 10px;
             .word{
                 font-size: 2em;
                 font-weight: bold;
-                margin: 1vh 1vw;
+                margin: 1vh 2vw;
             }
             .pronunciation {
                 color: grey;
                 font-style: italic;
                 font-size: 1.5em;
-                margin: 1vh 1vw;
+                margin: 1vh 2vw;
             }
             .type {
                 font-size: 1.5em;
-                margin: 1vh 1vw;
+                margin: 1vh 2vw;
             }
             .definition {
                 font-size: 1.25em;
-                margin: 1vh 1vw;
+                margin: 1vh 2vw;
             }
             .example {
                 font-size: 1.25em;
                 font-style: italic;
-                margin: 1vh 1vw;
+                margin: 1vh 2vw;
             }
         }
     }
