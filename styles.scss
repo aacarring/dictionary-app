@@ -12,21 +12,23 @@ body {
     min-height: 100vh;
     @include flexDisplay();
     header {
-        position: absolute;
-        top: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
         text-align: center;
-        height: 5vh;
+        height: 15vh;
         width: 75vw;
         min-width: 175px;
-        margin-top: 2.5vh;
+        margin: 2.5vh auto;
+        margin-top: 5vh;
         h1 {
             font-family: 'Codystar', cursive;
             margin-bottom: 2.5vh;
         }
     }
     .search {
-        position: absolute;
-        top: 20vh;
+        height: 5vh;
         @include flexDisplay();
         flex-direction: row;
         width: 75vw;
@@ -55,11 +57,9 @@ body {
         }
     }
     .word-info-container {
-        position: absolute;
-        top: 30vh;
         width: 75vw;
-        min-height: 50vh;
-        margin: 5vh auto;
+        min-height: 68.5vh;
+        margin-bottom: 5vh;
         @include flexDisplay();
         img {
             max-width: 100%;

@@ -87,3 +87,8 @@ function searchForWord() {
 }
 
 searchButton.addEventListener('click', searchForWord);
+document.onkeydown = function(event) {
+    if (event.keyCode == 13) {
+        searchForWord();
+    }
+}
